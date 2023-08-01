@@ -1,0 +1,26 @@
+// function for convert binary search tree into sorted doubly linked list
+
+void converttosdl(Node* root, Node* &head){
+    if(root==NULL){
+        return;
+    }
+  // call for right
+converttosdl(root->right,head);
+
+//attaching as it is double means do bar attachment hoga
+
+root->right=head;
+
+if(head!=NULL)
+  head->left=NULL;
+
+//updat head to root
+
+head==root;
+
+// call for left
+converttosdl(root->left,head);
+  
+
+
+}
